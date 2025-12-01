@@ -1,0 +1,269 @@
+/* Accessibiliy Notes
+
+https://venngage.com/tools/accessible-color-palette-generator
+
+4.57:1 Contrast Ratio (white/0073e6)
+Passing 
+Small Text 4.5:1 filter
+Large Text 3:1 filter
+
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif, 'Times New Roman', serif;
+  color: white;
+  background-color: #564141;
+}
+
+p {
+  color: white;
+  font-style: italic;
+}
+
+/*Banner sizing*/
+#banner {
+    display: block;        /* allows centering */
+    width: 66%;            /* makes image 66% of page width */
+    margin: 0 auto;        /* centers it horizontally */
+    height: auto;          /* keeps aspect ratio */
+}
+
+/*A different font used for my HEADINGS*/
+h1 {
+  color: #d4af37;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3, h4 {
+  color: #d4af37;
+  text-align: left;
+}
+
+a {
+  padding: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Navigation bar link */
+nav a {
+  display: inline; /* don't want in block */
+  padding: 10px;
+}
+
+/* Navigation bar */
+nav {
+  text-align: center;
+}
+
+/* Tables */
+table {
+  margin: 0 auto;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200 200 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td,th {
+  border: 1px solid #d4af37;
+  padding: 10px 20px;
+  background-color: rgb(71, 70, 70);
+  color: #d4af37;
+}
+
+th {
+  background-color: white;
+  color: #564141;
+}
+
+td {
+  text-align: center;
+}
+
+caption {
+  padding: 10px;
+  font-size: large;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+/*Align list items to the left*/
+ul, li {
+  text-align: left;
+}
+
+/*Colors for Political Parties*/
+.democrat {
+  color: #0066ff;
+}
+.republican {
+  color: #ff0000;
+}
+.other {
+  color: #ffcc00;
+}
+
+/*CSS for Grid Layout*/
+.container {
+  display: grid;
+  grid-template-areas:
+    'aboutHeader aboutHeader aboutHeader aboutHeader aboutHeader aboutHeader'
+    'about1 about1 about1 about1 right right'
+    'about2 about2 about2 about2 right right'
+    'volunteerHeader volunteerHeader volunteerHeader volunteerHeader volunteerHeader volunteerHeader'
+    'volunteerBody volunteerBody volunteerBody volunteerBody volunteerBody volunteerBody'
+    'donateHeader donateHeader donateHeader donateHeader donateHeader donateHeader'
+    'donateBody donateBody donateBody donateBody donateBody donateBody'
+    'sources sources sources sources sources sources'
+    'footer footer footer footer footer footer';
+  background-color: white;
+  padding: 5px;
+  gap: 5px;  
+}
+
+.container div {
+  background-color: #564141;
+  color: #d4af37;
+  padding: 10px;
+  text-align: center;
+}
+
+/*CSS for Grid Layout*/
+.containerLounge {
+  display: grid;
+  grid-template-areas:
+    'aboutHeader aboutHeader aboutHeader aboutHeader aboutHeader aboutHeader'
+    'about1 about1 about1 about1 right right'
+    'about2 about2 about2 about2 right right'
+    'volunteerHeader volunteerHeader volunteerHeader volunteerHeader volunteerHeader volunteerHeader'
+    'volunteerBody volunteerBody volunteerBody volunteerBody volunteerBody volunteerBody'
+    'donateHeader donateHeader donateHeader donateHeader donateHeader donateHeader'
+    'donateBody donateBody donateBody donateBody donateBody donateBody'
+    'sources sources sources sources sources sources'
+    'footer footer footer footer footer footer';
+  background-color: white;
+  padding: 5px;
+  gap: 5px;  
+}
+
+.containerLounge div {
+  background-color: #564141;
+  color: #d4af37;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+.item1 {
+  grid-area: aboutHeader;
+}
+.item2 {
+  grid-area: about1;
+}
+.item3 {
+  grid-area: about2;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: volunteerHeader;
+}
+.item6 {
+  grid-area: volunteerBody;
+}
+.item7 {
+  grid-area: donateHeader;
+}
+.item8 {
+  grid-area: donateBody;
+}
+.item9 {
+  grid-area: sources;
+}
+.item10 {
+  grid-area: footer;
+}
+
+/* Make candidate images scale smoothly on hover */
+td img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+td img:hover {
+  transform: scale(2); /* enlarge 200% */
+
+}
+
+/*transition of width and height for hover*/
+img {
+  width: 150px;
+  height: 150px;
+  transition: width 1s, height 1s;
+}
+
+/*height and width scaled up*/
+img:hover {
+  width: 400px;
+  height: 400px;
+}
+
+/*Responsive candidate image in about1 section */
+#about1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*transition of bgcolor and scale*/
+button {
+  background-color: lightgray;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 1s ease-out, transform 1s ease-out;
+}
+
+/*bgcolor and scale change on HOVER*/
+button:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Keyframes */
+/* 0 is beginning 100 is end */
+
+/*animation makes the button scale up smoothly */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.2);
+  }
+  60% {
+    transform: scale(1.2)
+  }  
+  100% {
+    transform: scale(1)
+  }
+}
+
+.bounce-in {
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
